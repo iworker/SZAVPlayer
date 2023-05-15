@@ -280,7 +280,7 @@ extension SZAVPlayer {
         isSeeking = true
 
         let toTime = CMTimeMakeWithSeconds(time, preferredTimescale: Int32(NSEC_PER_SEC))
-        let t = CMTimeMakeWithSeconds(10, preferredTimescale: Int32(NSEC_PER_SEC))
+        let t = CMTimeMakeWithSeconds(100, preferredTimescale: Int32(NSEC_PER_SEC))
       player.seek(to: toTime, toleranceBefore: t, toleranceAfter: t) { [weak self] (finished) in
             self?.isSeeking = false
 
