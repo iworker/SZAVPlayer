@@ -40,7 +40,7 @@ public class SZAVPlayerAssetLoader: NSObject {
     }
 
     deinit {
-        SZLogInfo("deinit")
+        //SZLogInfo("deinit")
     }
 
     public func loadAsset(isLocalURL: Bool = false, completion: @escaping (AVURLAsset) -> Void) {

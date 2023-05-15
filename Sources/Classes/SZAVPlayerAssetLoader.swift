@@ -41,7 +41,7 @@ public class SZAVPlayerAssetLoader: NSObject {
     }
 
     deinit {
-        SZLogInfo("deinit")
+        //SZLogInfo("deinit")
     }
 
     public func loadAsset(disableCustomLoading: Bool = false, completion: @escaping (AVURLAsset) -> Void) {
@@ -185,7 +185,7 @@ extension SZAVPlayerAssetLoader {
                 range: requestedRange
             )
         }()
-        
+        SZLogInfo("PLAYER DataRequest range: \(lowerBound) - \(upperBound)")
         dataLoader.append(requestedRange: requestedRange, dataRequest: dataRequest)
 
         return true

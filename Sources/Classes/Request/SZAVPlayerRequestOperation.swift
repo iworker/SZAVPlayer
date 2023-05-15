@@ -29,7 +29,7 @@ public class SZAVPlayerRequestOperation: Operation {
     private var _executing: Bool = false
 
     deinit {
-        SZLogInfo("deinit")
+        //SZLogInfo("deinit")
     }
 
     public init(url: URL, range: SZAVPlayerRange?, config: SZAVPlayerConfig) {

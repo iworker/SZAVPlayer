@@ -34,7 +34,7 @@ class SZAVPlayerDataLoaderOperation: Operation {
     private var _executing: Bool = false
 
     deinit {
-        SZLogInfo("deinit")
+        //SZLogInfo("deinit")
     }
 
     init(uniqueID: String,
@@ -123,9 +123,11 @@ extension SZAVPlayerDataLoaderOperation {
 
             var tmpOperation: Operation?
             let localFileStartOffset = fileInfo.startOffset
+            SZLogInfo("DataLoaderOperation local range: \(startOffset) - \(endOffset)")
             if startOffset >= localFileStartOffset {
                 tmpOperation = addLocalFileRequest(startOffset: &startOffset, endOffset: endOffset, fileInfo: fileInfo)
             } else {
+              SZLogInfo("DataLoaderOperation remote range: \(startOffset) - \(localFileStartOffset + 1)")
                 tmpOperation = addRemoteRequest(startOffset: startOffset, endOffset: localFileStartOffset + 1)
                 tmpOperation = addLocalFileRequest(startOffset: &startOffset, endOffset: endOffset, fileInfo: fileInfo)
             }

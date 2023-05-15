@@ -44,7 +44,7 @@ class SZAVPlayerDataLoader: NSObject {
     }
 
     deinit {
-        SZLogInfo("deinit")
+        //SZLogInfo("deinit")
     }
 
     public func start() {
