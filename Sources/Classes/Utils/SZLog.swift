@@ -75,7 +75,8 @@ public class SZLog {
         guard shouldLog else { return }
 
         let fileName = String(describing: file).lastPathComponent
-        let formattedMsg = String(format: "file:%@ func:%@ line:%d msg:---%@", fileName, String(describing: function), line, message())
+        // let formattedMsg = String(format: "file:%@ func:%@ line:%d msg:---%@", fileName, String(describing: function), line, message())
+      let formattedMsg = String(format: "%@", message())
         SZLogFormatter.shared.log(message: formattedMsg, type: type)
     }
     

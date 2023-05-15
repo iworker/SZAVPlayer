@@ -131,7 +131,7 @@ extension SZAVPlayerDataLoaderOperation {
                 tmpOperation = addRemoteRequest(startOffset: startOffset, endOffset: localFileStartOffset + 1)
                 tmpOperation = addLocalFileRequest(startOffset: &startOffset, endOffset: endOffset, fileInfo: fileInfo)
             }
-
+          SZLogInfo("==================================================================")
             finalOperation = tmpOperation
         }
 

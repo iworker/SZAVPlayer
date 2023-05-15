@@ -613,7 +613,7 @@ extension SZAVPlayer {
 extension SZAVPlayer: SZAVPlayerAssetLoaderDelegate {
 
     public func assetLoaderDidFinishDownloading(_ assetLoader: SZAVPlayerAssetLoader) {
-        SZLogInfo("did finish downloading")
+        //  SZLogInfo("did finish downloading")
     }
 
     public func assetLoader(_ assetLoader: SZAVPlayerAssetLoader, didDownload bytes: Int64) {
