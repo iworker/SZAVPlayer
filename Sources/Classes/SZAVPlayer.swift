@@ -281,7 +281,7 @@ extension SZAVPlayer {
 
         let toTime = CMTimeMakeWithSeconds(time, preferredTimescale: Int32(NSEC_PER_SEC))
         let t = CMTimeMakeWithSeconds(10, preferredTimescale: Int32(NSEC_PER_SEC))
-      player.seek(to: toTime, toleranceBefore: , toleranceAfter: 1) { [weak self] (finished) in
+      player.seek(to: toTime, toleranceBefore: t, toleranceAfter: t) { [weak self] (finished) in
             self?.isSeeking = false
 
             if finished && autoPlay {
