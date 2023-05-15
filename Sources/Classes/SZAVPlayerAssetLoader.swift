@@ -241,6 +241,7 @@ extension SZAVPlayerAssetLoader: AVAssetResourceLoaderDelegate {
     public func resourceLoader(_ resourceLoader: AVAssetResourceLoader,
                                didCancel loadingRequest: AVAssetResourceLoadingRequest)
     {
+      
         dataLoader.cancel()
     }
 

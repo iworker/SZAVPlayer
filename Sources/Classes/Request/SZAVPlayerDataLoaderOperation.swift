@@ -111,6 +111,7 @@ extension SZAVPlayerDataLoaderOperation {
         let localFileInfos = SZAVPlayerDatabase.shared.localFileInfos(uniqueID: uniqueID)
         guard localFileInfos.count > 0 else {
             finalOperation = addRemoteRequest(range: requestedRange)
+          SZLogInfo("DataLoaderOperation remote range: \(requestedRange.lowerBound) - \(requestedRange.upperBound)")
             return
         }
 
